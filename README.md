@@ -1,12 +1,34 @@
 # RAG-Powered Internal Knowledge Chatbot
 
-> Standalone reference build, pulled out of my [73-workflow n8n portfolio](https://github.com/Redsf/N8N-workflows). Credential-free — no secrets, API keys, or client data included.
+> Standalone reference build, pulled out of my [73-workflow n8n portfolio](https://github.com/Redsf/n8n-workflows). Credential-free — no secrets, API keys, or client data included.
 >
 > Full write-up (strategy, architecture, results) in the case study: [Redsf/internal-knowledge-chatbot-fintech →](https://github.com/Redsf/Redsf/blob/main/case-studies/internal-knowledge-chatbot-fintech.md)
 
 A Slack-native Q&A bot that answers employee questions from your company's internal documentation. Notion pages and Google Drive files are synced into a Pinecone vector store every night, and mentioning the bot in Slack triggers an AI agent that retrieves the relevant chunks and replies in-thread with a source link attached.
 
 Built for internal ops and knowledge-management teams that want documentation to stay searchable and current without anyone manually re-indexing it.
+
+## Production results
+
+From the production deployment of this architecture (fintech, internal ops):
+
+| Metric | Result |
+|---|---|
+| New-hire onboarding time | **−50%** |
+| Answers cited to source doc | **100%** (or honest "not found") |
+| Index freshness | Nightly re-sync, zero manual work |
+
+Full breakdown: [case study →](https://github.com/Redsf/Redsf/blob/main/case-studies/internal-knowledge-chatbot-fintech.md)
+
+## Demo
+
+<!-- SCREENSHOT: n8n canvas of this workflow — save as docs/images/workflow-canvas.png and uncomment -->
+<!-- ![Workflow canvas](docs/images/workflow-canvas.png) -->
+
+<!-- SCREENSHOT: bot answering in a Slack thread with source link — save as docs/images/slack-answer.png and uncomment -->
+<!-- ![Slack answer](docs/images/slack-answer.png) -->
+
+🎥 *Video walkthrough coming soon — question asked in Slack, source-cited answer back in thread.*
 
 ## What it does
 

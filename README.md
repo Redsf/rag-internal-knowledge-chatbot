@@ -66,6 +66,18 @@ This workflow runs two independent flows off two triggers.
 
 All credential IDs in this workflow are placeholders (`REPLACE_WITH_CREDENTIAL_ID`) — assign your own n8n credentials to each node before activating.
 
+## Evals
+
+This repo ships with an **automated eval harness** ([evals/](evals/)) — 23 test
+cases covering answerable questions, honest-refusal checks, and prompt-injection
+resistance, graded by an LLM judge on correctness, groundedness, and citation
+rate. Run it against your deployment before and after any prompt, model, or
+chunking change:
+
+```bash
+python evals/run_eval.py --webhook https://your-n8n-host/webhook/rag-qa
+```
+
 ## Error handling
 
 Notion and Drive API calls retry up to twice on failure. A dedicated **Error Trigger** catches any workflow-level failure and **Notify Ops** posts the error message to a Slack channel, so a broken nightly sync or a failed Slack reply doesn't go unnoticed.

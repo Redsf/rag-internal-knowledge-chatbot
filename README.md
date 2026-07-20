@@ -20,16 +20,6 @@ From the production deployment of this architecture (fintech, internal ops):
 
 Full breakdown: [case study →](https://github.com/Redsf/Redsf/blob/main/case-studies/internal-knowledge-chatbot-fintech.md)
 
-## Demo
-
-<!-- SCREENSHOT: n8n canvas of this workflow — save as docs/images/workflow-canvas.png and uncomment -->
-<!-- ![Workflow canvas](docs/images/workflow-canvas.png) -->
-
-<!-- SCREENSHOT: bot answering in a Slack thread with source link — save as docs/images/slack-answer.png and uncomment -->
-<!-- ![Slack answer](docs/images/slack-answer.png) -->
-
-🎥 *Video walkthrough coming soon — question asked in Slack, source-cited answer back in thread.*
-
 ## What it does
 
 This workflow runs two independent flows off two triggers.

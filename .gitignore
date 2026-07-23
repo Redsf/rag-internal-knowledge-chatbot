@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+
+# Eval run output — regenerated on every run, not source.
+evals/scores.json
+evals/report.md
+
+.DS_Store
+.idea/
+.vscode/

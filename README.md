@@ -1,6 +1,8 @@
 # RAG-Powered Internal Knowledge Chatbot
 
-> Standalone reference build, pulled out of my [63-workflow n8n portfolio](https://github.com/Redsf/n8n-workflows). Credential-free — no secrets, API keys, or client data included.
+[![validate](https://github.com/Redsf/rag-internal-knowledge-chatbot/actions/workflows/validate.yml/badge.svg)](https://github.com/Redsf/rag-internal-knowledge-chatbot/actions/workflows/validate.yml)
+
+> Standalone reference build, pulled out of my [59-workflow n8n portfolio](https://github.com/Redsf/n8n-workflows). Credential-free — no secrets, API keys, or client data included.
 >
 > Full write-up (strategy, architecture, results) in the case study: [Redsf/internal-knowledge-chatbot-fintech →](https://github.com/Redsf/Redsf/blob/main/case-studies/internal-knowledge-chatbot-fintech.md)
 
@@ -67,6 +69,10 @@ chunking change:
 ```bash
 python evals/run_eval.py --webhook https://your-n8n-host/webhook/rag-qa
 ```
+
+CI runs `evals/selfcheck.py` on every push, which byte-compiles the harness and
+validates that the test-case file parses with unique IDs — so a broken eval
+suite is caught on push rather than discovered mid-eval.
 
 ## Error handling
 
